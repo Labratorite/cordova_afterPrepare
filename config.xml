@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" id="com.xxxx.app" version="4.0.2" ios-CFBundleVersion="4.0.1.0" android-versionCode="34">
+  <name>Be Ambitious</name>
+  <description/>
+  <author/>
+  <content src="index.html" />
+  <allow-navigation href="*"/>
+  <allow-intent href="itms:*"/>
+  <allow-intent href="itms-apps:*"/>
+  <preference name="loglevel" value="DEBUG"/>
+  <preference name="AndroidLaunchMode" value="singleTop"/>
+  <preference name="ErrorUrl" value=""/>
+  <preference name="SplashScreen" value="screen"/>
+  <preference name="AllowInlineMediaPlayback" value="false"/>
+  <preference name="BackupWebStorage" value="cloud"/>
+  <preference name="FadeSplashScreenDuration" value="250"/>
+  <preference name="KeyboardDisplayRequiresUserAction" value="true"/>
+  <preference name="MediaPlaybackRequiresUserAction" value="false"/>
+  <preference name="SuppressesIncrementalRendering" value="false"/>
+  <preference name="TopActivityIndicator" value="gray"/>
+  <preference name="GapBetweenPages" value="0"/>
+  <preference name="PageLength" value="0"/>
+  <preference name="PaginationBreakingMode" value="page"/>
+  <preference name="PaginationMode" value="unpaginated"/>
+  <feature name="LocalStorage">
+    <param name="ios-package" value="CDVLocalStorage"/>
+  </feature>
+  <preference name="UIWebViewDecelerationSpeed" value="normal"/>
+  <platform name="ios">
+    <preference name="scheme" value="app" />
+    <preference name="orientation" value="portrait"/>
+    <custom-config-file parent="UISupportedInterfaceOrientations" target="*-Info.plist" mode="replace">
+      <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationPortraitUpsideDown</string>
+      </array>
+    </custom-config-file>
+    <custom-config-file parent="UISupportedInterfaceOrientations~ipad" target="*-Info.plist" mode="replace">
+      <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationPortraitUpsideDown</string>
+      </array>
+    </custom-config-file>
+    <icon src="/res/ios/icon/icon.png" width="57" height="57"/>
+    <icon src="/res/ios/icon/icon@2x.png" width="114" height="114"/>
+    <icon src="/res/ios/icon/icon-72.png" width="72" height="72"/>
+    <icon src="/res/ios/icon/icon-72@2x.png" width="144" height="144"/>
+    <icon src="/res/ios/icon/icon-60.png" width="60" height="60"/>
+    <icon src="/res/ios/icon/icon-60@2x.png" width="120" height="120"/>
+    <icon src="/res/ios/icon/icon-60@3x.png" width="180" height="180"/>
+    <icon src="/res/ios/icon/icon-76.png" width="76" height="76"/>
+    <icon src="/res/ios/icon/icon-76@2x.png" width="152" height="152"/>
+    <icon src="/res/ios/icon/icon-40.png" width="40" height="40"/>
+    <icon src="/res/ios/icon/icon-40@2x.png" width="80" height="80"/>
+    <icon src="/res/ios/icon/icon-50.png" width="50" height="50"/>
+    <icon src="/res/ios/icon/icon-50@2x.png" width="100" height="100"/>
+    <icon src="/res/ios/icon/icon-small.png" width="29" height="29"/>
+    <icon src="/res/ios/icon/icon-small@2x.png" width="58" height="58"/>
+    <icon src="/res/ios/icon/icon-small@3x.png" width="87" height="87"/>
+    <icon src="/res/ios/icon/icon-83.5@2x~ipad.png" width="167" height="167"/>
+    <icon src="/res/ios/icon/icon-1024.png" width="1024" height="1024"/>
+    <splash src="/res/ios/screen/Default@2x~universal~anyany.png"/>
+    <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
+      <string>please check code</string>
+    </edit-config>
+    <icon src="/res/ios/icon/icon-20.png" width="20" height="20"/>
+    <config-file platform="ios" parent="CFBundleLocalizations" target="*-Info.plist">
+      <array>
+        <string>ja</string>
+      </array>
+    </config-file>
+  </platform>
+  <platform name="android">
+    <custom-preference name="android-manifest/application/activity/@android:windowSoftInputMode" value="adjustPan"/>
+    <custom-preference name="android-manifest/application/activity/@android:resizeableActivity" value="false"/>
+    <preference name="android-targetSdkVersion" value="31"/>
+    <preference name="scheme" value="http" />
+    <preference name="AndroidInsecureFileModeEnabled" value="false" />
+    <icon src="/res/android/icon/mdpi.png" density="mdpi" background="/res/android/icon/mdpi-background.png" foreground="/res/android/icon/mdpi-foreground.png"/>
+    <icon src="/res/android/icon/hdpi.png" density="hdpi" background="/res/android/icon/hdpi-background.png" foreground="/res/android/icon/hdpi-foreground.png"/>
+    <icon src="/res/android/icon/xhdpi.png" density="xhdpi" background="/res/android/icon/xhdpi-background.png" foreground="/res/android/icon/xhdpi-foreground.png"/>
+    <icon src="/res/android/icon/xxhdpi.png" density="xxhdpi" background="/res/android/icon/xxhdpi-background.png" foreground="/res/android/icon/xxhdpi-foreground.png"/>
+    <icon src="/res/android/icon/xxxhdpi.png" density="xxxhdpi" background="/res/android/icon/xxxhdpi-background.png" foreground="/res/android/icon/xxxhdpi-foreground.png"/>
+    <edit-config xmlns:android="http://schemas.android.com/apk/res/android" file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+      <application android:usesCleartextTraffic="true"/>
+      <application android:requestLegacyExternalStorage="true"/>
+    </edit-config>
+    <icon src="/res/android/icon/ldpi.png" density="ldpi"/>
+    <preference name="AndroidWindowSplashScreenBackground" value="#468fff"/>
+    <splash src="/res/android/screen/splash-port-ldpi.9.png" density="port-ldpi"/>
+    <splash src="/res/android/screen/splash-port-mdpi.9.png" density="port-mdpi"/>
+    <splash src="/res/android/screen/splash-port-hdpi.9.png" density="port-hdpi"/>
+    <splash src="/res/android/screen/splash-port-xhdpi.9.png" density="port-xhdpi"/>
+    <splash src="/res/android/screen/splash-port-xxhdpi.9.png" density="port-xxhdpi"/>
+    <splash src="/res/android/screen/splash-port-xxxhdpi.9.png" density="port-xxxhdpi"/>
+    <splash src="/res/android/screen/splash-port-mdpi.png" density="mdpi"/>
+  </platform>
+  <platform name="electron">
+    <icon src="/res/electron/icon/icon_electron_512.png" width="512" height="512"/>
+    <splash src="/res/electron/screen/electron_splash_image.png" width="620" height="300"/>
+    <preference name="SplashScreenWidth" value="620"/>
+    <preference name="SplashScreenHeight" value="300"/>
+    <preference name="ShowSplashScreen" value="false"/>
+  </platform>
+  <preference name="WindowsStorePublisherName" value="×〇×〇"/>
+  <preference name="WindowsStoreIdentityName" value="8a8d8480-7a56-ab27-daaa-07c12299a8b5"/>
+  <preference name="SplashMaintainAspectRatio" value="true"/>
+  <preference name="MediaTypesRequiringUserActionForPlayback" value="false"/>
+  <preference name="ios-XCBuildConfiguration-TARGETED_DEVICE_FAMILY" value="1"/>
+  <preference name="target-device" value="handset"/>
+  <preference name="AutoHideSplashScreen" value="true"/>
+  <preference name="FadeSplashScreen" value="true"/>
+  <preference name="ShowSplashScreenSpinner" value="false"/>
+  <preference name="EnableViewportScale" value="false"/>
+  <access origin="*"/>
+  <preference name="KeepRunning" value="false"/>
+  <preference name="monaca:AndroidIsPackageNameSeparate" value="false"/>
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="Orientation" value="portrait"/>
+  <preference name="SplashScreenDelay" value="3000"/>
+  <preference name="Fullscreen" value="false"/>
+</widget>
